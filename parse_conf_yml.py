@@ -25,7 +25,7 @@ def parse_conf_yml(
     output_from_parsed_template: str = template.render(env=os.environ, var=variables)
 
     # to save the results
-    skip: str | None = os.getenv(key="SKIP_DATA_PREP")
+    skip: str | None = os.getenv(key="SKIP")
     print(skip)
     filename: str = f"my_newfile_{skip}.yml"
     with open(file=filename, mode="w") as fh:
